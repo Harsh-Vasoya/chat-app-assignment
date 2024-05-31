@@ -1,7 +1,24 @@
+buildscript {
+    ext.kotlin_version = '1.9.22'
+    repositories {
+        google()  // Google's Maven repository
+        mavenCentral()// Maven Central repository
+        // Add JitPack repository
+        maven { url 'https://jitpack.io' }
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.4.1'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'com.google.gms:google-services:4.4.1'
+    }
+}
 allprojects {
     repositories {
         google()
         mavenCentral()
+        // Add JitPack repository
+        maven { url 'https://jitpack.io' }
     }
 }
 
